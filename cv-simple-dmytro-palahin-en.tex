@@ -190,6 +190,17 @@
     }
 }
 
+% the first argument is the event; the second is the language and precision; the third is the date range
+\newcommand{\cveventitproject}[3]{
+    \vspace{2pt}
+    \parbox{\mpwidth}{
+        \begin{tabular*}{\mpwidth}{@{\extracolsep{\fill}} l r}
+            \textcolor{black}{\textbf{\fontsize{11}{12}\selectfont #1}}\hspace{-5pt}\textbf{\textcolor{black}{\quad|\quad}}\hspace{-5pt}\textcolor{black}{\textit{\fontsize{11}{12}\selectfont #2}} & 
+            \textcolor{black}{\textbf{\fontsize{12}{12}\selectfont #3}} \\
+        \end{tabular*}\\[-8pt] % to reduce space
+    }
+}
+
 % the first argument is the speciality; the second is the place
 \newcommand{\cvsubevent}[2]{
     \parbox{\mpwidth}{
@@ -291,6 +302,19 @@
 \pdfbookmark[1]{IT Projects}{projects}
 \vspace{5pt}
 \cvsection{\itProjectIcon[black]\hspace{4pt}IT PROJECTS}
+
+\pdfbookmark[2]{Reaction System}{rs}
+\cveventitproject{\href{https://github.com/DmytroPalahin/hsReact}{Reaction System}}{Haskell}{2024}
+{Representing reaction systems and processes using functional programming}
+
+\vspace{8pt}
+\pdfbookmark[2]{Salesman Problem}{salesman}
+\cveventitproject{\href{https://github.com/DmytroPalahin/Probleme_du_Voyageur_de_Commerce}{Traveling Salesman Problem}}{C, Reinforcement Learning}{2023}
+{Implementing the Ant Colony Optimization Algorithm}
+
+\pdfbookmark[2]{Article}{article}
+\cveventitproject{\href{https://www.researchsquare.com/article/rs-2203260/v1}{Publication of an Article}}{C, Reinforcement Learning}{2021}
+{Implementing the Ant Colony Optimization Algorithm}
 
 % Skills
 \cvsection{Skills}
