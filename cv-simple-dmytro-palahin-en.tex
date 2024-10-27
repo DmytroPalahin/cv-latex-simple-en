@@ -76,6 +76,10 @@
 \newcommand{\itProjectIcon}[1][black]{\textcolor{#1}{\faLaptopCode}}
 \newcommand{\awardIcon}[1][black]{\textcolor{#1}{\faTrophy}}
 \newcommand{\circlednumber}[1][black]{\textcircled{\raisebox{-0.9pt}{#1}}}
+\newcommand{\gearIcon}[1][black]{\textcolor{#1}{\faCog}}
+\newcommand{\speechBubbleIcon}[1][black]{\textcolor{#1}{\faComment}}
+\newcommand{\certificateIcon}[1][black]{\textcolor{#1}{\faClipboard}}
+\newcommand{\starIcon}[1][black]{\textcolor{#1}{\faStar}}
 
 %----------------------------------------------------------------------------------------
 % PAGE LAYOUT DEFINITIONS
@@ -92,7 +96,7 @@
 \usepackage{lipsum}
 \usepackage{atbegshi}
 \usepackage[a4paper]{geometry}
-\geometry{top=0.75cm, bottom=0.0625cm, left=0.75cm, right=0.75cm}
+\geometry{top=0.25cm, bottom=0.0625cm, left=0.1875cm, right=0.1875cm}
 
 \pagestyle{empty}
 \setlength{\parindent}{0mm}
@@ -158,13 +162,13 @@
 
 \newcommand{\cvname}[1]{
     \begin{center}
-        \textbf{\textcolor{black}{\fontsize{20pt}{16pt}\selectfont #1}}
+        \textbf{\textcolor{black}{\fontsize{17pt}{12pt}\selectfont #1}}
     \end{center}
 }
 
 \newcommand{\cvsection}[1]{
     \vspace{5pt}
-    \textbf{\fontsize{12pt}{14pt}\selectfont \textcolor{black}{#1}}
+    \textbf{\fontsize{12pt}{10pt}\selectfont \textcolor{black}{#1}}
     \vspace{8pt}
     \hrule
     \vspace{8pt}
@@ -205,7 +209,7 @@
 \newcommand{\cvsubevent}[2]{
     \parbox{\mpwidth}{
         \begin{tabular*}{1\mpwidth}{@{\extracolsep{\fill}} l r}
-            \textcolor{black}{\textit{\fontsize{11}{12}\selectfont #1}} & \textcolor{black}{\textit{\fontsize{12}{12}\selectfont #2}} \\
+            \textcolor{black}{\textit{\fontsize{10}{12}\selectfont #1}} & \textcolor{black}{\textit{\fontsize{10}{12}\selectfont #2}} \\
         \end{tabular*}\\[-8pt] % to reduced some space
     }
     \vspace{-10pt}
@@ -213,7 +217,7 @@
 
 \newcommand{\cvcourses}[2]{
     \begin{tabularx}{\mpwidth}{@{}lX@{}}
-        \textcolor{black}{\textbf{\fontsize{11}{12}\selectfont #1}} & \textcolor{black}{\fontsize{11}{12}\selectfont #2}
+        \textcolor{black}{\textbf{\fontsize{10}{12}\selectfont #1}} & \textcolor{black}{\fontsize{10}{12}\selectfont #2}
     \end{tabularx}
     \vspace{12pt}
 }
@@ -230,7 +234,7 @@
 % TITLE
 %---------------------------------------------------------------------------------------
 \cvname{Dmytro Palahin}
-\vspace{-5pt}
+\vspace{-15pt}
 \pdfbookmark[1]{Contact}{contact}
 \begin{center}
     \locationIcon[black]\hspace{4pt}Paris, France\hspace{6pt}
@@ -238,27 +242,30 @@
     \emailLink[black]{dmytro.palahin@gmail.com}\hspace{6pt}
     \linkedinIcon[black]\hspace{3pt}\href{https://www.linkedin.com/in/dmytro-palahin/}{Dmytro Palahin}\hspace{6pt}
     \githubIcon[black]\hspace{3pt}\href{https://github.com/DmytroPalahin}{DmytroPalahin}\\
-    \birthdayIcon[black]\hspace{6pt}05/12/2003\hspace{6pt}
+    \birthdayIcon[black]\hspace{6pt}05/12/2003 (20 years)\hspace{6pt}
     \nationalityIcon[black]\hspace{6pt}Ukrainian\hspace{6pt}
 \end{center}
 
 %----------------------------------------------------------------------------------------
 % EDUCATION
 %----------------------------------------------------------------------------------------
+\vspace{-15pt}
 \pdfbookmark[1]{Education}{education}
-\vspace{3pt}
 \cvsection{\educationIcon[black]\hspace{4pt}EDUCATION}
 
+\vspace{-7pt}
 \pdfbookmark[2]{Sup Galilée}{sup_galilee}
 \cvevent{\href{https://www.sup-galilee.univ-paris13.fr/}{Sup Galilée School of Engineering}}{2023\hspace{5pt}--\hspace{5pt}2026}
 \cvsubevent{Computer Science Engineering Degree}{Paris, France}
 \cvcourses{Courses:}{Numerical Methods, Data Structures, Probability and Statistics, Object-Oriented Programming, C/C++, Python, SQL, Data Mining, Web, Complexity, Compilation, Cloud Computing, Cybersecurity}
 
+\vspace{-6pt}
 \pdfbookmark[2]{Preparatory Class}{prepa}
 \cvevent{\href{https://www.sup-galilee.univ-paris13.fr/index.php/formation/cp2i/}{Sorbonne Paris Nord University}}{2021\hspace{5pt}--\hspace{5pt}2023}
 \cvsubevent{Preparatory Class at \textbf{Sup Galilée School} of Engineering}{Paris, France}
 \cvcourses{Courses:}{Algebra, Analysis, Topology and Differential Calculus, Scientific Computing, Algorithms, UNIX systems}
 
+\vspace{-12pt}
 \pdfbookmark[2]{High School}{high_school}
 \cvevent{Phymly High School}{2016\hspace{5pt}--\hspace{5pt}2021}
 \cvsubevent{Specialized Mathematics, Physics, and Computer Science}{Cherkasy, Ukraine}
@@ -266,10 +273,11 @@
 %----------------------------------------------------------------------------------------
 % WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
+\vspace{-2pt}
 \pdfbookmark[1]{Work Experience}{work_exp}
-\vspace{3pt}
 \cvsection{\workIcon[black]\hspace{4pt}WORK EXPERIENCE}
 
+\vspace{-4pt}
 \pdfbookmark[2]{Société Générale}{sg}
 \cvevent{Internship at Société Générale Insurance}{2023\hspace{5pt}--\hspace{5pt}2026}
 \cvsubevent{Data Engineer / MLOps}{Paris, France}
@@ -283,13 +291,13 @@
 \end{itemize}
 
 \pdfbookmark[2]{IT Company SPD}{spd}
-\vspace{7pt}
+\vspace{-2pt}
 \cvevent{Course at IT Company SPD Ukraine}{2021}
 \cvsubevent{Machine Learning / Deep Learning}{Cherkasy, Ukraine}
 \cvcourses{Core Tools \& Libraries:}{Scikit-Learn\hspace{5pt}--\hspace{5pt}Pandas\hspace{5pt}--\hspace{5pt}Numpy\hspace{5pt}--\hspace{5pt}KNN\hspace{5pt}--\hspace{5pt}XGBoost}
 
+\vspace{-12pt}
 \pdfbookmark[2]{Maths School}{maths_school}
-\vspace{-6pt}
 \cvevent{Mathematics School}{2019}
 \cvsubevent{Summer Math School Kontora Pi and Winter Math School}{Kyiv, Kharkiv, Ukraine}
 
@@ -300,54 +308,130 @@
 % IT PROJECTS
 %----------------------------------------------------------------------------------------
 \pdfbookmark[1]{IT Projects}{projects}
-\vspace{5pt}
+\vspace{-1pt}
 \cvsection{\itProjectIcon[black]\hspace{4pt}IT PROJECTS}
 
+\vspace{-4pt}
 \pdfbookmark[2]{Reaction System}{rs}
 \cveventitproject{\href{https://github.com/DmytroPalahin/hsReact}{Reaction System}}{Haskell}{2024}
 {Representing reaction systems and processes using functional programming}
 
-\vspace{8pt}
+\vspace{3pt}
 \pdfbookmark[2]{Salesman Problem}{salesman}
 \cveventitproject{\href{https://github.com/DmytroPalahin/Probleme_du_Voyageur_de_Commerce}{Traveling Salesman Problem}}{C, Reinforcement Learning}{2023}
 {Implementing the Ant Colony Optimization Algorithm}
 
+\vspace{3pt}
 \pdfbookmark[2]{Article}{article}
-\cveventitproject{\href{https://www.researchsquare.com/article/rs-2203260/v1}{Publication of an Article}}{C, Reinforcement Learning}{2021}
-{Implementing the Ant Colony Optimization Algorithm}
+\cveventitproject{\href{https://www.researchsquare.com/article/rs-2203260/v1}{Publication an Article}}{Mathematics Algorithms}{2021}
+{Method of Pulse Noise Filtration in Video Images (D.Palahin, V.Palahin, O.Zorin, O.Hozhyi)\newline\textit{Informatics and Mathematical Methods in Simulation}, Vol. 11 (2021), No. 4}
 
-% Skills
-\cvsection{Skills}
-\textbf{Machine Learning / Deep Learning:} Scikit-learn, TensorFlow, Keras, XGBoost, LightGBM, CatBoost, OpenCV \\
-\textbf{Data Analysis / Visualization:} Pandas, Numpy, Matplotlib, Seaborn, Plotly, Tableau, Power BI \\
-\textbf{Languages:} Python, C/C++, Java, SQL, HTML, JS/TS, Matlab, Haskell, LaTeX \\
-\textbf{Environments / Tools:} VSCode, Jupyter, Anaconda, Git, Docker, Linux, Windows, MacOS
+\vspace{3pt}
+\pdfbookmark[2]{Anomaly Detection}{anomaly_detection}
+\cveventitproject{\href{https://github.com/DmytroPalahin/Anomaly_Detection}{Anomaly Detection Methods}}{Python, Machine Learning}{2020}
+{Methods for Partial Data Labeling}
 
-% Certifications
-\cvsection{Certifications}
-\begin{itemize}[leftmargin=0.5cm]
-    \item SPD Ukraine: Course in Machine Learning at an IT company
-    \item Stepik: Course in Machine Learning
-\end{itemize}
+\vspace{3pt}
+\pdfbookmark[2]{Filtering Images}{filtering_imgs}
+\cveventitproject{\href{https://github.com/DmytroPalahin/Filtering_Images}{Filtering Images}}{HTML, CSS, JS, Algorithms}{2019}
+{Implementing Mathematical Methods for Noise Filtering in Digital Images as an Internet Service}
 
-% Languages
-\cvsection{Languages}
-\textbf{Ukrainian:} Native \\
-\textbf{Russian:} Bilingual \\
-\textbf{French:} Fluent \\
-\textbf{English:} Fluent \\
-\textbf{German:} Beginner
+%----------------------------------------------------------------------------------------
+% AWARDS AND PARTICIPATIONS
+%----------------------------------------------------------------------------------------
+\pdfbookmark[1]{Participations}{participations}
+\vspace{-1pt}
+\cvsection{\awardIcon[black]\hspace{4pt}AWARDS \& PARTICIPATIONS}
 
-% Interests
-\cvsection{Interests}
-Chess, Tennis, Skiing, Cryptocurrencies, Swimming, Mountains
+\vspace{-4pt}
+\pdfbookmark[2]{Georges Besse Foundation}{fund}
+\cvevent{Recipient of the \href{https://www.fondationbesse.com/}{Georges Besse Foundation}}{2022}
 
-% Date and Signature
-\vfill
-\hspace{0cm}\hrulefill\\
-\vspace{-15pt}
-\begin{center}
-    \hspace*{15mm}\textit{25/10/2024} \hspace{20mm}\textit{Thank you for considering my application}
-\end{center}
+\vspace{-9pt}
+\pdfbookmark[2]{Maths \& Physics}{math_compt}
+\cvevent{Mathematics and Physics Competitions}{2020\hspace{5pt}--\hspace{5pt}2021}
+{1st place in the regional Ukrainian stage}
+
+\vspace{2pt}
+\pdfbookmark[2]{ISEF 2020}{isef}
+\cvevent{Eco\hspace{2pt}--\hspace{2pt}Techno Ukraine ISEF}{2020}
+{1st place in the \textbf{Computer Science} category at the international competition}
+
+\vspace{2pt}
+\pdfbookmark[2]{Collective Intelligence}{it_compt}
+\cvevent{Collective Intelligence Internet Service}{2019}
+{1st place in Ukraine}
+
+%----------------------------------------------------------------------------------------
+% SKILLS AND LANGUAGES
+%----------------------------------------------------------------------------------------
+%-------------------------------------
+% settings for columns separation
+\columnratio{0.65}
+\setlength{\columnsep}{1.2em}
+\setlength{\columnseprule}{0pt}
+%-------------------------------------
+
+\begin{paracol}{2}
+    \pdfbookmark[1]{Skills}{skills}
+    \begin{leftcolumn}
+        \cvsection{\gearIcon[black]\hspace{4pt}SKILLS}
+        \vspace{-8pt}
+        \begin{itemize}[leftmargin=0.25cm, label=\textbullet, itemsep=0.0625em]
+            \item \textbf{ML / DL:} Scikit-learn, TensorFlow, Keras, XGBoost, LightGBM, CatBoost
+            \item \textbf{Data Analysis:} Pandas, Numpy, Matplotlib, Seaborn, Plotly, Tableau, Power BI
+            \item \textbf{Languages:} Python, C/C++, Java, SQL, HTML, JS/TS, Matlab, Haskell, LaTeX
+            \item \textbf{Tools:} VSCode, Jupyter, Anaconda, Git, Docker, Linux, Windows, MacOS
+        \end{itemize}
+    \end{leftcolumn}
+    \pdfbookmark[1]{Languages}{languages}
+    \begin{rightcolumn}
+        \cvsection{\speechBubbleIcon[black]\hspace{4pt}LANGUAGES}
+        \begin{tabular}{ l @{\hspace{5pt}} l @{\hspace{5pt}} l @{\hspace{5pt}} l }
+            \textbf{Ukrainian} & Native   & \textbf{Russian} & Bilingual \\
+            \textbf{French}    & Fluent   & \textbf{English} & Fluent    \\
+            \textbf{German}    & Beginner &                  &           \\
+        \end{tabular}
+    \end{rightcolumn}
+\end{paracol}
+
+%----------------------------------------------------------------------------------------
+% CERTIFICATIONS AND INTERESTS
+%----------------------------------------------------------------------------------------
+%-------------------------------------
+% settings for columns separation
+\columnratio{0.65}
+\setlength{\columnsep}{1.2em}
+\setlength{\columnseprule}{0pt}
+%-------------------------------------
+
+\vspace{-5pt}
+\begin{paracol}{2}
+    \pdfbookmark[1]{Certifications}{certifications}
+    \begin{leftcolumn}
+        \cvsection{\certificateIcon[black]\hspace{4pt}CERTIFICATIONS}
+        \vspace{-8pt}
+        \begin{itemize}[leftmargin=0.25cm, label=\textbullet, itemsep=0.0625em]
+            \item \textbf{SPD Ukraine:} Course in Machine Learning at an IT company
+            \item \textbf{Stepik:} Course in Machine Learning
+        \end{itemize}
+    \end{leftcolumn}
+    \pdfbookmark[1]{Interests}{interests}
+    \begin{rightcolumn}
+        \cvsection{\starIcon[black]\hspace{4pt}INTERESTS}
+        \vspace{-5pt}
+        \begin{tabular}{ l @{\hspace{5pt}} l @{\hspace{5pt}} l }
+            \chessIcon[black] Chess\hspace{7pt}                  & \cryptoIcon[black] Cryptocurrency\hspace{7pt} & \skiIcon[black] Skiing\hspace{7pt}       \\
+            \textcolor{black}{\faTableTennis} Tennis\hspace{7pt} & \swimmingIcon[black] Swimming\hspace{7pt}     & \mountainsIcon[black] Hiking\hspace{7pt} \\
+        \end{tabular}
+    \end{rightcolumn}
+\end{paracol}
+
+% \vfill
+% \hspace{0cm}\hrulefill\\
+% \vspace{-15pt}
+% \begin{center}
+%     \hspace*{15mm}\textit{25/10/2024} \hspace{20mm}\textit{Thank you for considering my application}
+% \end{center}
 
 \end{document}
