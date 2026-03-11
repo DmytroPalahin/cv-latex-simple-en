@@ -80,6 +80,7 @@
 \newcommand{\speechBubbleIcon}[1][black]{\textcolor{#1}{\faComment}}
 \newcommand{\certificateIcon}[1][black]{\textcolor{#1}{\faClipboard}}
 \newcommand{\starIcon}[1][black]{\textcolor{#1}{\faStar}}
+\newcommand{\tradingIcon}[1][black]{\textcolor{#1}{\faChartBar}}
 
 %----------------------------------------------------------------------------------------
 % PAGE LAYOUT DEFINITIONS
@@ -158,6 +159,13 @@
 % added to ensure correct hyperlinks                                
 \phantomsection{}
 \usepackage{bookmark}
+
+%-------------------------------------------------------------------------------------------------------
+% AVOID WARNINGS
+%-------------------------------------------------------------------------------------------------------
+% chktex-file 12
+% to avoid'Underfull \hbox (badness 10000)LaTeX' which reports issues with text distribution across lines or pages
+\hbadness=10001
 
 %----------------------------------------------------------------------------------------
 % CV COMMANDS
@@ -238,18 +246,33 @@
 %---------------------------------------------------------------------------------------
 % TITLE
 %---------------------------------------------------------------------------------------
-\cvname{Dmytro Palahin}
-\vspace{-15pt}
 \pdfbookmark[1]{Contact}{contact}
-\begin{center}
-    \locationIcon[black]\hspace{4pt}Paris, France\hspace{6pt}
-    \href{tel:+33787325878}{\phoneIcon[black]\hspace{3pt} +33 7 87 32 58 78}\hspace{6pt}
-    \emailLink[black]{dmytro.palahin@gmail.com}\hspace{6pt}
-    \linkedinIcon[black]\hspace{3pt}\href{https://www.linkedin.com/in/dmytro-palahin/}{Dmytro Palahin}\hspace{6pt}
-    \githubIcon[black]\hspace{3pt}\href{https://github.com/DmytroPalahin}{DmytroPalahin}\\
-    \birthdayIcon[black]\hspace{6pt}05/12/2003 (20 years)\hspace{6pt}
-    \nationalityIcon[black]\hspace{6pt}Ukrainian\hspace{6pt}
-\end{center}
+\noindent
+\begin{minipage}[c]{0.86\textwidth}
+    \begin{center}
+        \textbf{\textcolor{black}{\fontsize{17pt}{12pt}\selectfont Dmytro Palahin}}
+    \end{center}
+    \vspace{-8pt}
+    \begin{center}
+        {\fontsize{9pt}{11pt}\selectfont
+            \locationIcon[black]\hspace{3pt}Paris, France\hspace{18pt}
+            \href{tel:+33787325878}{\phoneIcon[black]\hspace{3pt}+33 7 87 32 58 78}\hspace{18pt}
+            \emailLink[black]{dmytro.palahin@gmail.com}
+            \linkedinIcon[black]\hspace{3pt}\href{https://www.linkedin.com/in/dmytro-palahin/}{Dmytro Palahin}\hspace{18pt}
+            \githubIcon[black]\hspace{3pt}\href{https://github.com/DmytroPalahin}{DmytroPalahin}\hspace{18pt}
+            \birthdayIcon[black]\hspace{3pt}05/12/2003\hspace{18pt}
+            \nationalityIcon[black]\hspace{3pt}Ukrainian
+        }
+    \end{center}
+\end{minipage}%
+\hspace{3pt}
+\begin{minipage}[c]{0.11\textwidth}
+    \raggedleft
+    \begin{tikzpicture}
+        \clip (0,0) circle (1.0cm);
+        \node at (0,0) {\includegraphics[width=2.0cm, keepaspectratio]{img/photo.png}};
+    \end{tikzpicture}
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 % EDUCATION
@@ -288,11 +311,23 @@
 \cvsubevent{Data Engineer / MLOps}{Paris, France}
 \vspace{-3pt}
 \begin{itemize}[leftmargin=0.5cm, label=\textbullet, itemsep=0.0625em]
-    \item Migrate from the existing SAS to the Data Science Platform of Société Générale
-          Insurance
-    \item Design and develop various data pipelines, from ingestion to delivery in a
-          format consumable by data scientists
-    \item Maintain and evolve the data development framework of the DataLab
+
+    \item Built internal \textbf{VSCode extensions} (\textbf{TypeScript}) to streamline
+          data scientists' workflows on the internal Data Science Platform
+
+    \item Designed \textbf{Callbot performance dashboards} (\textbf{Apache Superset})
+          with custom KPIs to track system efficiency and adoption
+
+    \item Analyzed \textbf{Zaion Callbot} recognition errors (\textbf{Python}) by
+          comparing operational datasets --- identified root causes and delivered
+          improvement recommendations
+
+    \item Built an automated \textbf{data migration pipeline} (\textbf{Python, AWS S3})
+          to transfer SAS datasets to cloud storage, improving scalability and access
+
+    \item Improved internal \textbf{credential management} tool (\textbf{Python, JS}) to
+          simplify access administration for platform users
+
 \end{itemize}
 
 \pdfbookmark[2]{IT Company SPD}{spd}
@@ -301,22 +336,28 @@
 \cvsubevent{Machine Learning / Deep Learning}{Cherkasy, Ukraine}
 \cvcourses{Core Tools \& Libraries:}{Scikit-Learn\hspace{5pt}--\hspace{5pt}Pandas\hspace{5pt}--\hspace{5pt}Numpy\hspace{5pt}--\hspace{5pt}KNN\hspace{5pt}--\hspace{5pt}XGBoost}
 
-\vspace{-12pt}
-\pdfbookmark[2]{Maths School}{maths_school}
-\cvevent{Mathematics School}{2019}
-\cvsubevent{Summer Math School Kontora Pi and Winter Math School}{Kyiv, Kharkiv, Ukraine}
+% \vspace{-12pt}
+% \pdfbookmark[2]{Maths School}{maths_school}
+% \cvevent{Mathematics School}{2019}
+% \cvsubevent{Summer Math School Kontora Pi and Winter Math School}{Kyiv, Kharkiv, Ukraine}
 
-\cvevent{Leadership School MBA}{2018}
-\cvsubevent{Leadership, Teamwork, and Communication}{Kyiv, Ukraine}
+% \cvevent{Leadership School MBA}{2018}
+% \cvsubevent{Leadership, Teamwork, and Communication}{Kyiv, Ukraine}
 
 %----------------------------------------------------------------------------------------
 % IT PROJECTS
 %----------------------------------------------------------------------------------------
+\vspace{-10pt}
 \pdfbookmark[1]{IT Projects}{projects}
 \vspace{-1pt}
 \cvsection{\itProjectIcon[black]\hspace{4pt}IT PROJECTS}
 
 \vspace{-4pt}
+\pdfbookmark[2]{Logistics Center Placement}{logistics}
+\cveventitproject{\href{https://github.com/DmytroPalahin/logistics-center-placement}{Logistics Center Placement}}{Python, Julia, CPLEX, Optimization}{2025}
+{Combinatorial optimization project on logistics center placement using MILP models solved with CPLEX, greedy heuristics and stochastic local search, with experiments on French city datasets and interactive visualizations}
+
+\vspace{3pt}
 \pdfbookmark[2]{Reaction System}{rs}
 \cveventitproject{\href{https://github.com/DmytroPalahin/hsReact}{Reaction System}}{Haskell}{2024}
 {Representing reaction systems and processes using functional programming}
@@ -342,93 +383,89 @@
 {Implementing Mathematical Methods for Noise Filtering in Digital Images as an Internet Service}
 
 %----------------------------------------------------------------------------------------
-% AWARDS AND PARTICIPATIONS
+% CERTIFICATIONS / SKILLS
 %----------------------------------------------------------------------------------------
-\pdfbookmark[1]{Participations}{participations}
-\vspace{-1pt}
-\cvsection{\awardIcon[black]\hspace{4pt}AWARDS \& PARTICIPATIONS}
-
-\vspace{-4pt}
-\pdfbookmark[2]{Georges Besse Foundation}{fund}
-\cvevent{Recipient of the \href{https://www.fondationbesse.com/}{Georges Besse Foundation}}{2022}
-
-\vspace{-9pt}
-\pdfbookmark[2]{Maths \& Physics}{math_compt}
-\cvevent{Mathematics and Physics Competitions}{2020\hspace{5pt}--\hspace{5pt}2021}
-{1st place in the regional Ukrainian stage}
-
-\vspace{2pt}
-\pdfbookmark[2]{ISEF 2020}{isef}
-\cvevent{Eco\hspace{2pt}--\hspace{2pt}Techno Ukraine ISEF}{2020}
-{1st place in the \textbf{Computer Science} category at the international competition}
-
-\vspace{2pt}
-\pdfbookmark[2]{Collective Intelligence}{it_compt}
-\cvevent{Collective Intelligence Internet Service}{2019}
-{1st place in Ukraine}
-
-%----------------------------------------------------------------------------------------
-% SKILLS AND LANGUAGES
-%----------------------------------------------------------------------------------------
-%-------------------------------------
-% settings for columns separation
-\columnratio{0.65}
+\columnratio{0.45}
 \setlength{\columnsep}{1.2em}
 \setlength{\columnseprule}{0pt}
-%-------------------------------------
 
 \begin{paracol}{2}
-    \pdfbookmark[1]{Skills}{skills}
     \begin{leftcolumn}
+        \pdfbookmark[1]{Certifications}{certifications}
+        \vspace{-1pt}
+        \cvsection{\certificateIcon[black]\hspace{4pt}CERTIFICATIONS}
+        \vspace{-8pt}
+        \begin{itemize}[leftmargin=0.25cm, label=\textbullet, itemsep=0.0625em]
+            \item \textbf{Huawei:} \href{https://github.com/DmytroPalahin/cv-latex-simple-en/blob/main/docs/huawei_artificial_intelligence_and_applications.pdf}{Artificial Intelligence and Applications}
+            \item \textbf{Huawei:} \href{https://github.com/DmytroPalahin/cv-latex-simple-en/blob/main/docs/huawei_artificial_intelligence_technology_and_applications.pdf}{Artificial Intelligence Technology and Applications}
+            \item \textbf{SPD Ukraine:} Course in Machine Learning at an IT company
+            \item \textbf{Stepik:} Course in Machine Learning
+        \end{itemize}
+    \end{leftcolumn}
+    \begin{rightcolumn}
+        \pdfbookmark[1]{Skills}{skills}
+        \vspace{-1pt}
         \cvsection{\gearIcon[black]\hspace{4pt}SKILLS}
         \vspace{-8pt}
         \begin{itemize}[leftmargin=0.25cm, label=\textbullet, itemsep=0.0625em]
             \item \textbf{ML / DL:} Scikit-learn, TensorFlow, Keras, XGBoost, LightGBM, CatBoost
             \item \textbf{Data Analysis:} Pandas, Numpy, Matplotlib, Seaborn, Plotly, Tableau, Power BI
-            \item \textbf{Languages:} Python, C/C++, Java, SQL, HTML, JS/TS, Matlab, Haskell, LaTeX
+            \item \textbf{Languages:} Python, C/C++, Java, SQL, HTML, JS/TS, Matlab, Haskell, Julia, LaTeX
             \item \textbf{Tools:} VSCode, Jupyter, Anaconda, Git, Docker, Linux, Windows, MacOS
         \end{itemize}
-    \end{leftcolumn}
-    \pdfbookmark[1]{Languages}{languages}
-    \begin{rightcolumn}
-        \cvsection{\speechBubbleIcon[black]\hspace{4pt}LANGUAGES}
-        \begin{tabular}{ l @{\hspace{5pt}} l @{\hspace{5pt}} l @{\hspace{5pt}} l }
-            \textbf{Ukrainian} & Native   & \textbf{Russian} & Bilingual \\
-            \textbf{French}    & Fluent   & \textbf{English} & Fluent    \\
-            \textbf{German}    & Beginner &                  &           \\
-        \end{tabular}
     \end{rightcolumn}
 \end{paracol}
 
 %----------------------------------------------------------------------------------------
-% CERTIFICATIONS AND INTERESTS
+% AWARDS & PARTICIPATIONS / LANGUAGES + INTERESTS
 %----------------------------------------------------------------------------------------
-%-------------------------------------
-% settings for columns separation
+\vspace{-10pt}
 \columnratio{0.65}
 \setlength{\columnsep}{1.2em}
 \setlength{\columnseprule}{0pt}
-%-------------------------------------
 
-\vspace{-5pt}
 \begin{paracol}{2}
-    \pdfbookmark[1]{Certifications}{certifications}
+    \pdfbookmark[1]{Participations}{participations}
     \begin{leftcolumn}
-        \cvsection{\certificateIcon[black]\hspace{4pt}CERTIFICATIONS}
-        \vspace{-8pt}
-        \begin{itemize}[leftmargin=0.25cm, label=\textbullet, itemsep=0.0625em]
-            \item \textbf{SPD Ukraine:} Course in Machine Learning at an IT company
-            \item \textbf{Stepik:} Course in Machine Learning
-        \end{itemize}
+        \cvsection{\awardIcon[black]\hspace{4pt}AWARDS \& PARTICIPATIONS}
+
+        \vspace{-4pt}
+        \pdfbookmark[2]{Georges Besse Foundation}{fund}
+        \cvevent{Recipient of the \href{https://www.fondationbesse.com/}{Georges Besse Foundation}}{}
+
+        \vspace{-9pt}
+        % \pdfbookmark[2]{Maths \& Physics}{math_compt}
+        % \cvevent{Mathematics and Physics Competitions}{}
+        % {1st place in the regional Ukrainian stage}
+
+        \vspace{2pt}
+        \pdfbookmark[2]{ISEF 2020}{isef}
+        \cvevent{Eco\hspace{2pt}--\hspace{2pt}Techno Ukraine ISEF}{}
+        {1st place in the \textbf{Computer Science} category at the international competition}
+
+        \vspace{2pt}
+        \pdfbookmark[2]{Collective Intelligence}{it_compt}
+        \cvevent{Collective Intelligence Internet Service}{}
+        {1st place in Ukraine}
     \end{leftcolumn}
-    \pdfbookmark[1]{Interests}{interests}
     \begin{rightcolumn}
+        \pdfbookmark[1]{Languages}{languages}
+        \cvsection{\speechBubbleIcon[black]\hspace{4pt}LANGUAGES}
+        \begin{tabular}{ l @{\hspace{5pt}} l @{\hspace{5pt}} l @{\hspace{5pt}} l }
+            \textbf{Ukrainian} & Native & \textbf{Russian} & Bilingual \\
+            \textbf{French}    & Fluent & \textbf{English} & Fluent    \\
+            % \textbf{German}    & Beginner &                  &           \\
+        \end{tabular}
+
+        \pdfbookmark[1]{Interests}{interests}
         \cvsection{\starIcon[black]\hspace{4pt}INTERESTS}
         \vspace{-5pt}
-        \begin{tabular}{ l @{\hspace{5pt}} l @{\hspace{5pt}} l }
-            \chessIcon[black] Chess\hspace{7pt}                  & \cryptoIcon[black] Cryptocurrency\hspace{7pt} & \skiIcon[black] Skiing\hspace{7pt}       \\
-            \textcolor{black}{\faTableTennis} Tennis\hspace{7pt} & \swimmingIcon[black] Swimming\hspace{7pt}     & \mountainsIcon[black] Hiking\hspace{7pt} \\
-        \end{tabular}
+        \tradingIcon[black]\hspace{2pt}Trading\hspace{6pt}
+        \cryptoIcon[black]\hspace{2pt}Crypto\hspace{6pt}
+        \chessIcon[black]\hspace{2pt}Chess\hspace{6pt}
+        \skiIcon[black]\hspace{2pt}Skiing\hspace{6pt}
+        % \textcolor{black}{\faTableTennis}\hspace{2pt}Tennis\hspace{6pt}
+        % \swimmingIcon[black]\hspace{2pt}Swimming
     \end{rightcolumn}
 \end{paracol}
 
@@ -440,3 +477,8 @@
 % \end{center}
 
 \end{document}
+
+/*
+latexmk -pdf cv-dmytro-palahin-en.tex
+latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-en.tex
+*/

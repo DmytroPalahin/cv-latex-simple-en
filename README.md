@@ -1,51 +1,38 @@
-# cv-latex-simple-en
+# 📄 cv-latex-simple-en
 
-This project contains the LaTeX source code for the CV of Dmytro Palahin.
+> Personal CV of **Dmytro Palahin** — Data Engineer & MLOps student  
+> 🎓 Sup Galilée School of Engineering, Paris, France
 
-## 📋 Prerequisites
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Built with LaTeX](https://img.shields.io/badge/Built%20with-LaTeX-008080?logo=latex&logoColor=white)](https://www.latex-project.org/)
+[![Status](https://img.shields.io/badge/status-active-brightgreen)]()
 
-- 📦 LaTeX distribution (e.g., TeX Live, MiKTeX)
-- 🔄 `latexmk` (optional, for automated compilation)
+---
 
-## 📥 Installation
+## 🖼️ Preview
 
-1. Install a LaTeX distribution:
-    - 📚 TeX Live: [https://www.tug.org/texlive/](https://www.tug.org/texlive/)
-    - 📚 MiKTeX: [https://miktex.org/](https://miktex.org/)
+![CV Preview](img/cv-dmytro-palahin-en.png)
 
-2. Clone the repository:
+---
 
-    ```sh
-    git clone https://github.com/DmytroPalahin/cv-latex-simple-en.git
-    cd cv-latex-simple-en
-    ```
+## ⚙️ Build
 
-## 🚀 Usage
-
-To compile the CV, run the following command in the `cv-latex-simple-en` directory:
+Make sure you have a LaTeX distribution installed (e.g. [TeX Live](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/)) with `fontawesome5`, `paracol`, and `latexmk`.
 
 ```sh
-pdflatex cv-simple-dmytro-palahin-en.tex
+latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-en.tex
 ```
 
-Or, if you have `latexmk`, `xelatex`, or `lualatex` installed, you can use one of the following commands:
+## 🤝 Contributing
 
-```sh
-latexmk -pdf cv-simple-dmytro-palahin-en.tex
+This is a personal CV repository — external contributions are not expected.
+Feel free to fork and adapt the template for your own use.
+See CONTRIBUTING.md for details.
 
-xelatex cv-simple-dmytro-palahin-en.tex
+## 📋 Changelog
 
-lualatex cv-simple-dmytro-palahin-en.tex
-```
-
-This will generate a PDF file named `cv-simple-dmytro-palahin-en.pdf`.
-
-## 👀 Preview
-
-Here is a preview of the generated CV:
-
-![CV Preview](img/cv-simple-dmytro-palahin-en.png)
+See [CHANGELOG.md](CHANGELOG.md) for all notable changes.
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
