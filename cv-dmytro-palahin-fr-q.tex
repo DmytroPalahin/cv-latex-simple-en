@@ -99,7 +99,8 @@
 \usepackage{lipsum}
 \usepackage{atbegshi}
 \usepackage[a4paper]{geometry}
-\geometry{top=0.25cm, bottom=0.0625cm, left=0.1875cm, right=0.1875cm}
+\geometry{top=0.15cm, bottom=0.0625cm, left=0.1875cm, right=0.1875cm}
+% \geometry{top=0.15cm,bottom=0.35cm,left=0.35cm,right=0.35cm}
 
 \pagestyle{empty}
 \setlength{\parindent}{0mm}
@@ -245,87 +246,164 @@
 \sloppy             % Better line breaks
 \hfuzz=10000pt      % Suppress box warnings globally
 
+% %---------------------------------------------------------------------------------------
+% % TITLE
+% %---------------------------------------------------------------------------------------
+% \pdfbookmark[1]{Contact}{contact}
+% \noindent
+% \begin{minipage}[c]{0.86\textwidth}
+%     \begin{center}
+%         \textbf{\textcolor{black}{\fontsize{14pt}{10pt}\selectfont Dmytro Palahin}}
+%     \end{center}
+%     \vspace{-18pt}
+%     \begin{center}
+%         {\fontsize{9pt}{11pt}\selectfont
+%             \locationIcon[black]\hspace{3pt}Paris, France\hspace{18pt}
+%             \href{tel:+33787325878}{\phoneIcon[black]\hspace{3pt}+33 7 87 32 58 78}\hspace{18pt}
+%             \emailLink[black]{dmytro.palahin@gmail.com}\hspace{18pt}
+%             \linkedinIcon[black]\hspace{3pt}\href{https://www.linkedin.com/in/dmytro-palahin/}{Dmytro Palahin}\hspace{18pt}
+%             \githubIcon[black]\hspace{3pt}\href{https://github.com/DmytroPalahin}{DmytroPalahin}\hspace{18pt}
+%             % \birthdayIcon[black]\hspace{3pt}12/05/2003\hspace{18pt}
+%             % \nationalityIcon[black]\hspace{3pt}Ukrainian
+%         }
+%     \end{center}
+% \end{minipage}%
+% \hspace{3pt}
+% \begin{minipage}[c]{0.11\textwidth}
+%     \vspace{-12pt}
+%     \raggedleft{}
+%     \begin{tikzpicture}
+%         \clip (0,0) circle (1.0cm);
+%         \node at (0,0) {\includegraphics[width=1.6cm, keepaspectratio]{img/photo.png}};
+%     \end{tikzpicture}
+% \end{minipage}
+
+% %----------------------------------------------------------------------------------------
+% % PROFILE
+% %----------------------------------------------------------------------------------------
+% \vspace{-15pt}
+
+% \cvtextnotab{
+%     \fontsize{9.5pt}{11pt}\selectfont
+%     Ingénieur en informatique spécialisé en \textbf{Data Engineering, Machine Learning et calcul scientifique},
+%     avec 3 ans d'expérience en alternance chez \textbf{Société Générale Assurances}.
+%     Solide formation en \textbf{mathématiques appliquées, probabilités, statistiques, optimisation et algorithmique},
+%     avec un intérêt particulier pour le \textbf{Quantitative Development, Quantitative Research et les marchés financiers}.
+% }
 %---------------------------------------------------------------------------------------
-% TITLE
+% HEADER
 %---------------------------------------------------------------------------------------
 \pdfbookmark[1]{Contact}{contact}
+
 \noindent
-\begin{minipage}[c]{0.86\textwidth}
+\begin{minipage}[t]{0.865\textwidth}
+    \vspace{-4pt}
+
+    % NAME
     \begin{center}
-        \textbf{\textcolor{black}{\fontsize{17pt}{12pt}\selectfont Dmytro Palahin}}
+        {\textbf{\fontsize{15pt}{10pt}\selectfont Dmytro Palahin}}
     \end{center}
-    \vspace{-18pt}
+
+    \vspace{-16pt}
+
+    % CONTACTS
     \begin{center}
-        {\fontsize{9pt}{11pt}\selectfont
-            \locationIcon[black]\hspace{3pt}Paris, France\hspace{18pt}
-            \href{tel:+33787325878}{\phoneIcon[black]\hspace{3pt}+33 7 87 32 58 78}\hspace{18pt}
-            \emailLink[black]{dmytro.palahin@gmail.com}\hspace{18pt}
-            \linkedinIcon[black]\hspace{3pt}\href{https://www.linkedin.com/in/dmytro-palahin/}{Dmytro Palahin}\hspace{18pt}
-            \githubIcon[black]\hspace{3pt}\href{https://github.com/DmytroPalahin}{DmytroPalahin}\hspace{18pt}
-            % \birthdayIcon[black]\hspace{3pt}12/05/2003\hspace{18pt}
-            % \nationalityIcon[black]\hspace{3pt}Ukrainian
+        {\fontsize{8.7pt}{10pt}\selectfont
+            \locationIcon[black]\hspace{2pt}Paris, France
+            \hspace{10pt}
+            \href{tel:+33787325878}{
+                \phoneIcon[black]\hspace{2pt}+33 7 87 32 58 78
+            }
+            \hspace{10pt}
+            \emailLink[black]{dmytro.palahin@gmail.com}
+            \hspace{10pt}
+            \linkedinIcon[black]\hspace{2pt}
+            \href{https://www.linkedin.com/in/dmytro-palahin/}{Dmytro Palahin}
+            \hspace{10pt}
+            \githubIcon[black]\hspace{2pt}
+            \href{https://github.com/DmytroPalahin}{DmytroPalahin}
         }
     \end{center}
-\end{minipage}%
-\hspace{3pt}
-\begin{minipage}[c]{0.11\textwidth}
-    \vspace{-12pt}
-    \raggedleft{}
+
+    \vspace{-8pt}
+
+    % PROFILE
+    {\fontsize{8.7pt}{9.6pt}\selectfont
+        Ingénieur en informatique avec \textbf{3 ans d'expérience en Data Engineering,
+            Machine Learning et MLOps} chez \textbf{Société Générale Assurances}.
+        Solide formation en \textbf{mathématiques appliquées, probabilités,
+            statistiques, optimisation et algorithmique}, avec un intérêt pour le
+        \textbf{Quantitative Development et Quantitative Research}.
+    }
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.115\textwidth}
+    \vspace{1pt}
+    \centering
+
     \begin{tikzpicture}
-        \clip (0,0) circle (1.0cm);
-        \node at (0,0) {\includegraphics[width=1.6cm, keepaspectratio]{img/photo.png}};
+        \clip (0,0) circle (0.88cm);
+        \node at (0,0) {
+            \includegraphics[
+                width=1.55cm,
+                keepaspectratio
+            ]{img/photo.png}
+        };
     \end{tikzpicture}
 \end{minipage}
+
+\vspace{2pt}
 
 %----------------------------------------------------------------------------------------
 % PROFESSIONAL EXPERIENCE
 %----------------------------------------------------------------------------------------
-\vspace{-15pt}
-\pdfbookmark[1]{Experience}{work_exp}
-\cvsection{\workIcon[black]\hspace{4pt}PROFESSIONAL EXPERIENCE}
+\vspace{-2pt}
+\pdfbookmark[1]{Expérience}{work_exp}
+\cvsection{\workIcon[black]\hspace{4pt}EXPÉRIENCE PROFESSIONNELLE}
 
 \vspace{-4pt}
 \pdfbookmark[2]{Société Générale}{sg}
-\cvevent{Data Engineer / MLOps (Work-study) --- Société Générale Assurances}{\fontsize{11pt}{11pt}\selectfont 09/2023\hspace{5pt}--\hspace{5pt}Present}
+\cvevent{Data Engineer / MLOps (Alternance) --- Société Générale Assurances}{\fontsize{11pt}{11pt}\selectfont 09/2023\hspace{5pt}--\hspace{5pt}Aujourd'hui}
 \cvsubevent{La Défense, France}{}
 
-\vspace{-3pt}
+\vspace{-5pt}
 \begin{itemize}[leftmargin=0.5cm, label=\textbullet, itemsep=0.0625em]
-    \item Designed an \textbf{automated SAS-to-Python migration system} powered
-          by \textbf{GitHub Copilot}, leveraging \textbf{prompt engineering},
-          reusable \textbf{Skills} (specialized agent capabilities) and persistent
-          context (\texttt{copilot-instructions.md}), validated by a 2-tier test suite
+    \item Conception d'un \textbf{système automatisé de migration SAS vers Python}
+          basé sur \textbf{GitHub Copilot}, intégrant du \textbf{prompt engineering},
+          des \textbf{Skills} réutilisables (capacités spécialisées d'agent) et un contexte
+          persistant (\texttt{copilot-instructions.md}), validé par une suite de tests à 2 niveaux
           \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
               \item \textit{\fontsize{10pt}{9pt}\selectfont Python · Polars · DuckDB · GitHub Copilot · Prompt Engineering · AWS S3}
           \end{itemize}
 
-    \item Data analysis on recognition errors of the \textbf{Zaion Callbot} based on
-          \textbf{1 year of operational data} to evaluate \textbf{system effectiveness}
-          and identify the main causes of errors, leading to \textbf{3 improvement
-              recommendations}
+    \item Analyse de données sur les erreurs de reconnaissance du \textbf{Callbot Zaion}
+          à partir de \textbf{1 an de données opérationnelles} afin d'évaluer
+          \textbf{l'efficacité du système} et d'identifier les causes principales des erreurs,
+          conduisant à \textbf{3 recommandations d'amélioration}
           \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
               \item \textit{\fontsize{10pt}{9pt}\selectfont Python · Pandas · NumPy · Matplotlib · Seaborn · Plotly · Jupyter Notebook · Conda}
           \end{itemize}
 
-    \item Development and deployment of \textbf{3 VS-Code extensions} to simplify the use
-          of internal tools on the \textbf{Data platform} and improve workflow efficiency
-          for \textbf{30\raisebox{0.20ex}{\small +} users (Data Scientists \& Data
-              Analysts)}
-          \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
-              \item \textit{\fontsize{10pt}{9pt}\selectfont TypeScript · Python · JSON · Bash · Linux · Git · VS-Code}
-          \end{itemize}
+          % \item Développement et déploiement de \textbf{3 extensions VS-Code} afin de simplifier
+          %       l'utilisation d'outils internes sur la \textbf{plateforme Data} et d'améliorer
+          %       l'efficacité des workflows pour \textbf{30\raisebox{0.20ex}{\small +} utilisateurs
+          %           (Data Scientists \& Data Analysts)}
+          %       \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
+          %           \item \textit{\fontsize{10pt}{9pt}\selectfont TypeScript · Python · JSON · Bash · Linux · Git · VS-Code}
+          %       \end{itemize}
 
-    \item Design and deployment of a \textbf{Zaion Callbot monitoring dashboard} to track
-          \textbf{10\raisebox{0.20ex}{\small +} operational KPIs} and analyze system
-          performance for internal teams
+    \item Conception et déploiement d'un \textbf{dashboard de pilotage du Callbot Zaion}
+          afin de suivre \textbf{10\raisebox{0.20ex}{\small +} KPI opérationnels} et
+          d'analyser la performance du système pour les équipes internes
           \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
               \item \textit{\fontsize{10pt}{9pt}\selectfont Apache Superset · PostgreSQL}
           \end{itemize}
 
-    \item Design and automation of a \textbf{data migration pipeline} enabling the
-          transfer of \textbf{500\raisebox{0.20ex}{\small +} GB of SAS datasets to AWS
-              S3}, in order to improve \textbf{scalability, access, and data processing} for
-          Data teams
+    \item Conception et automatisation d'un \textbf{pipeline de migration de données}
+          permettant le transfert de \textbf{500\raisebox{0.20ex}{\small +} GB de datasets
+              SAS vers AWS S3}, afin d'améliorer la \textbf{scalabilité, l'accès et le
+              traitement des données} pour les équipes Data
           \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
               \item \textit{\fontsize{10pt}{9pt}\selectfont Python · AWS S3 · fsspec · smbfs · Linux · Bash}
           \end{itemize}
@@ -337,13 +415,13 @@
           %           \item \textit{\fontsize{10pt}{9pt}\selectfont Python · JavaScript · API · Git}
           %       \end{itemize}
 
-    \item Maintenance and update of \textbf{35\raisebox{0.20ex}{\small +} internal
-              extensions} as well as \textbf{code-server versions} to ensure the
-          \textbf{stability and compatibility of the development environment} used by
-          \textbf{40\raisebox{0.20ex}{\small +} users} in Data teams
-          \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
-              \item \textit{\fontsize{10pt}{9pt}\selectfont Linux · Bash · VS Code · code-server · Git}
-          \end{itemize}
+          % \item Maintenance et mise à jour de \textbf{35\raisebox{0.20ex}{\small +} extensions
+          %           internes} ainsi que des \textbf{versions de code-server} afin de garantir la
+          %       \textbf{stabilité et la compatibilité de l'environnement de développement} utilisé par
+          %       \textbf{40\raisebox{0.20ex}{\small +} utilisateurs} des équipes Data
+          %       \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
+          %           \item \textit{\fontsize{10pt}{9pt}\selectfont Linux · Bash · VS Code · code-server · Git}
+          %       \end{itemize}
 
           % \item Analysis and comparison of \textbf{two data tables (SAS vs DataLake S3)} on
           %       \textbf{several thousand rows} via \textbf{matching methods and gap analysis},
@@ -366,45 +444,42 @@
 %----------------------------------------------------------------------------------------
 % IT PROJECTS
 %----------------------------------------------------------------------------------------
-\vspace{-5pt}
-\pdfbookmark[1]{Projects}{projects}
-\vspace{-1pt}
-\cvsection{\itProjectIcon[black]\hspace{4pt}IT PROJECTS}
-
 \vspace{-4pt}
-\begin{itemize}[leftmargin=0.5cm, label=\textbullet, itemsep=0.2em]
-    \pdfbookmark[2]{Phishing email detection}{phishing}
-    \item \href{https://github.com/DmytroPalahin/phishing-email-detection}{\textbf{Phishing Email Detection System}} | \textit{Python, Machine Learning, NLP} \hfill \textbf{2026}
+\pdfbookmark[1]{Projets}{projects}
+\vspace{-4pt}
+\cvsection{\itProjectIcon[black]\hspace{4pt}PROJETS INFORMATIQUES}
 
-          Phishing email classifier trained on \textbf{76\,677 emails} (5 real-world datasets) via
-          full NLP pipeline~: TF-IDF, URL extraction, LightGBM\,+\,Naive Bayes\,+\,LSTM ensemble
+\vspace{-7pt}
+\begin{itemize}[leftmargin=0.5cm, label=\textbullet, itemsep=0.2em]
+    \pdfbookmark[2]{Placement de centres logistiques}{logistics}
+    \item \href{https://github.com/DmytroPalahin/logistics-center-placement}{\textbf{Placement de centres logistiques}} | \textit{Python, Julia, CPLEX, Optimisation} \hfill \textbf{2025}
+
+          Optimisation du placement de centres logistiques avec modèles MILP, CPLEX et heuristiques
+
+          \pdfbookmark[2]{Détection de phishing par email}{phishing}
+    \item \href{https://github.com/DmytroPalahin/phishing-email-detection}{\textbf{Système de détection de phishing par email}} | \textit{Python, Machine Learning, NLP} \hfill \textbf{2026}
+
+          Classification d'emails phishing entraînée sur \textbf{76\,677 emails} (5 datasets réels) via
+          un pipeline NLP complet~: TF-IDF, extraction d'URLs, ensemble LightGBM\,+\,Naive Bayes\,+\,LSTM
           %   \begin{itemize}[leftmargin=0.25cm,label=\textendash,itemsep=0em,topsep=0.2em]
           %       \item \textit{\fontsize{10pt}{9pt}\selectfont Python · LightGBM · TensorFlow/Keras · Scikit-Learn · Pandas · NumPy · Jupyter}
           %   \end{itemize}
 
-          \pdfbookmark[2]{Logistics Center Placement}{logistics}
-    \item \href{https://github.com/DmytroPalahin/logistics-center-placement}{\textbf{Logistics Center Placement}} | \textit{Python, Julia, CPLEX, Optimization} \hfill \textbf{2025}
+          \pdfbookmark[2]{Système de réactions}{rs}
+    \item \href{https://github.com/DmytroPalahin/hsReact}{\textbf{Système de réactions}} | \textit{Haskell} \hfill \textbf{2024}
 
-          Combinatorial optimization project for logistics center placement using MILP
-          models solved with CPLEX and heuristics
+          Représentation de systèmes et processus de réactions en programmation fonctionnelle
 
-          \pdfbookmark[2]{Reaction System}{rs}
-    \item \href{https://github.com/DmytroPalahin/hsReact}{\textbf{Reaction System}} | \textit{Haskell} \hfill \textbf{2024}
+          \pdfbookmark[2]{Problème du voyageur de commerce}{salesman}
+    \item \href{https://github.com/DmytroPalahin/Probleme_du_Voyageur_de_Commerce}{\textbf{Problème du voyageur de commerce}} | \textit{C, Apprentissage par renforcement} \hfill \textbf{2023}
 
-          Representation of reaction systems and processes using functional programming
-
-          \pdfbookmark[2]{Traveling Salesman Problem}{salesman}
-    \item \href{https://github.com/DmytroPalahin/Probleme_du_Voyageur_de_Commerce}{\textbf{Traveling Salesman Problem}} | \textit{C, Reinforcement Learning} \hfill \textbf{2023}
-
-          Implementation of the ant colony optimization algorithm
+          Implémentation de l'algorithme d'optimisation par colonies de fourmis
 
           \pdfbookmark[2]{Article}{article}
-    \item \href{https://www.researchsquare.com/article/rs-2203260/v1}{\textbf{Research Publication}} | \textit{Mathematical Algorithms} --- Impulse noise filtering method in video images \textit{Informatics and Mathematical Methods in Simulation}, Vol. 11 (2021), No. 4 \hfill \textbf{2021}
+    \item \href{https://www.researchsquare.com/article/rs-2203260/v1}{\textbf{Publication de recherche}} | \textit{Algorithmes mathématiques} --- Méthode de filtrage du bruit impulsionnel dans les images vidéo \textit{Informatics and Mathematical Methods in Simulation}, Vol. 11 (2021), No. 4 \hfill \textbf{2021}
 
-          \pdfbookmark[2]{Anomaly Detection}{anomaly_detection}
-    \item \href{https://github.com/DmytroPalahin/Anomaly_Detection}{\textbf{Anomaly Detection}} | \textit{Python, Machine Learning} \hfill \textbf{2021}
-
-          Methods for partial data labeling
+          \pdfbookmark[2]{Détection d'anomalies}{anomaly_detection}
+    \item \href{https://github.com/DmytroPalahin/Anomaly_Detection}{\textbf{Détection d'anomalies}} Méthodes pour l'étiquetage partiel de données | \textit{Python, Machine Learning} \hfill \textbf{2021}
 
           %       \pdfbookmark[2]{Image Filtering}{filtering_imgs}
           % \item \href{https://github.com/DmytroPalahin/Filtering_Images}{\textbf{Image Filtering}} | \textit{HTML, CSS, JS, Algorithms} \hfill \textbf{2019}
@@ -417,17 +492,77 @@
 % EDUCATION
 %----------------------------------------------------------------------------------------
 \vspace{-5pt}
-\pdfbookmark[1]{Education}{education}
-\cvsection{\educationIcon[black]\hspace{4pt}EDUCATION}
+\pdfbookmark[1]{Formation}{education}
+\cvsection{\educationIcon[black]\hspace{4pt}FORMATION}
 
 \vspace{-3pt}
 \pdfbookmark[2]{Sup Galilée}{sup_galilee}
-\cvevent{\href{https://www.sup-galilee.univ-paris13.fr/}{Sup Galilée Engineering School} --- Engineering Degree in Computer Science}{\fontsize{11pt}{11pt}\selectfont 2023\hspace{5pt}--\hspace{5pt}2026}
+\cvevent{\href{https://www.sup-galilee.univ-paris13.fr/}{École d'ingénieurs Sup Galilée} --- Diplôme d'ingénieur en Informatique}{\fontsize{11pt}{11pt}\selectfont 2023\hspace{5pt}--\hspace{5pt}2026}
 % \cvsubevent{}{Villetaneuse, France}
 
 \vspace{-3pt}
-\cvtextnotab{\textbf{Courses\!:} Cloud Computing, Data Mining and Programming for AI, Databases (MySQL) and NoSQL, Docker, Probability and Statistics, Linear and Combinatorial Optimization, Parallel and Distributed Algorithms, Graph Algorithms, and others}
-% additional courses:
+\cvtextnotab{
+    \textbf{Cours\!:}
+    Probabilités et Statistiques, Optimisation linéaire et combinatoire,
+    Méthodes numériques, Data Mining, Programmation pour l'IA,
+    Algorithmique et Complexité, Algorithmique des graphes,
+    C/C++, Algorithmes parallèles et distribués,
+    Bases de données avancées, Cloud Computing
+}
+% 1. Mathématiques
+% 1.1 Algèbre linéaire  
+% Espaces vectoriels  
+% Matrices  
+% Déterminants  
+% Valeurs propres  
+% Diagonalisation  
+% Formes bilinéaires  
+% Formes quadratiques  
+
+% 1.2 Analyse mathématique   
+% Limites  
+% Continuité  
+% Dérivabilité  
+% Développements de Taylor  
+% Matrice hessienne  
+% Matrice jacobienne  
+% Dérivées partielles  
+% Intégrales doubles et triples  
+% Changement de variables  
+% Équations différentielles  
+
+% 1.3 Probabilités  
+% Probabilités  
+% Probabilités conditionnelles  
+% Variables aléatoires  
+% Loi gaussienne  
+% Loi exponentielle  
+% Lois continues  
+
+% 1.4 Statistiques  
+% Tu avais notamment :  
+% Probabilités et Statistiques  
+% Data Mining  
+
+% 1.5 Optimisation  
+% Optimisation linéaire et optimisation combinatoire
+
+% 2. Informatique
+% Algorithmes  
+% Algorithmes sur les graphes  
+% Complexité  
+% C  
+% C++  
+% Java  
+% Programmation fonctionnelle  
+% Logique  
+% Bases de données  
+% Bases de données avancées  
+% Cloud  
+% Algorithmes distribués  
+% Algorithmes parallèles  
+% Cryptographie  
+% Programmation en intelligence artificielle
 % Cybersecurity
 % UML
 % Analysis / Algebra
@@ -450,12 +585,18 @@
 \noindent{\textcolor{middle_light_gray}{\rule{\mpwidth}{0.2pt}}}
 \vspace{-15pt}
 
-\pdfbookmark[2]{Preparatory Class}{prepa}
-\cvevent{\href{https://www.univ-spn.fr}{Sorbonne Paris Nord University} --- \href{https://www.sup-galilee.univ-paris13.fr/index.php/formation/cp2i/}{Preparatory Class for \textbf{Sup Galilée}}}{\fontsize{11pt}{11pt}\selectfont 2021\hspace{5pt}--\hspace{5pt}2023}
+\pdfbookmark[2]{Classe préparatoire}{prepa}
+\cvevent{\href{https://www.univ-spn.fr}{Université Sorbonne Paris Nord} --- \href{https://www.sup-galilee.univ-paris13.fr/index.php/formation/cp2i/}{Classe préparatoire à \textbf{Sup Galilée}}}{\fontsize{11pt}{11pt}\selectfont 2021\hspace{5pt}--\hspace{5pt}2023}
 % \cvsubevent{}{Villetaneuse, France}
 
 \vspace{-10pt}
-\cvtextnotab{\textbf{Courses\!:} Algebra, Analysis, Topology and Differential Calculus, Scientific Computing, Algorithms, UNIX Systems}
+\cvtextnotab{
+    \textbf{Cours\!:}
+    Algèbre linéaire (espaces vectoriels, matrices, valeurs propres, diagonalisation),
+    Analyse multivariable (dérivées partielles, Jacobienne, Hessienne, séries de Taylor),
+    Probabilités (variables aléatoires, probabilités conditionnelles, lois usuelles),
+    équations différentielles et calcul numérique
+}
 
 % \vspace{-5pt}
 % \noindent{\textcolor{middle_light_gray}{\rule{\mpwidth}{0.2pt}}}
@@ -468,36 +609,39 @@
 %----------------------------------------------------------------------------------------
 % CERTIFICATIONS & SKILLS
 %----------------------------------------------------------------------------------------
-\vspace{-14pt}
-\pdfbookmark[1]{Certifications and Skills}{certifications_competences}
-\cvsection{\certificateIcon[black]\hspace{4pt}CERTIFICATIONS \& SKILLS}
+\vspace{-8pt}
+\pdfbookmark[1]{Certifications et Compétences}{certifications_competences}
+\cvsection{\certificateIcon[black]\hspace{4pt}CERTIFICATIONS \& COMPÉTENCES}
 
 \vspace{-4pt}
 \begin{itemize}[leftmargin=0.5cm, label=\textbullet, itemsep=0.2em]
-    \item \textbf{Languages \& Tools\!:}
-          Python, SQL, Java, C/C++, JS/TS, LaTeX ·
-          Apache Spark, PySpark, Apache Airflow, dbt, Apache Kafka ·
-          Pandas, NumPy, Polars, DuckDB, PostgreSQL, MySQL ·
-          Scikit-Learn, TensorFlow, Keras, LightGBM, XGBoost, MLflow ·
-          Docker, Git, Linux, AWS, Jupyter, UV, Jira ·
-          Matplotlib, Seaborn, Plotly
 
-    \item \textbf{Udemy --- Jose Portilla / Pierian Training\!:}
+    \item \textbf{Programmation \& Algorithmique\!:}
+          Python, C/C++, SQL, Java ·
+          Algorithmique, structures de données, complexité,
+          algorithmique des graphes, programmation parallèle et distribuée ·
+          Git, Linux
+
+    \item \textbf{Data Science \& Machine Learning\!:}
+          NumPy, Pandas, Polars, DuckDB ·
+          Scikit-Learn, TensorFlow/Keras, LightGBM, XGBoost ·
+          Jupyter, Matplotlib, Seaborn, Plotly
+
+    \item \textbf{Mathématiques appliquées\!:}
+          Algèbre linéaire, analyse multivariable,
+          probabilités et statistiques, méthodes numériques,
+          optimisation linéaire et combinatoire, équations différentielles
+
+    \item \textbf{Marchés financiers\!:}
+          Forex, marchés actions et futures, structure de marché,
+          types d'ordres, exécution, gestion du risque, MT4/MT5
+
+    \item \textbf{Udemy\!:}
           \href{https://www.udemy.com/certificate/UC-51319000-ccb8-4c9c-9320-6cd9860e601c/}
           {\textit{Python for Data Science and Machine Learning Bootcamp}}
-          |
-          \textit{Python, NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn, Plotly,
-              Machine Learning, NLP, Deep Learning, TensorFlow/Keras, Apache Spark}
+          --- Jose Portilla / Pierian Training
 
-    \item \textbf{Huawei AI Certifications:}
-          \href{https://github.com/DmytroPalahin/cv-latex-simple-en/blob/main/docs/huawei_artificial_intelligence_and_applications.pdf}
-          {\textit{Artificial Intelligence and Applications}}
-          \hspace{4pt}•\hspace{4pt}
-          \href{https://github.com/DmytroPalahin/cv-latex-simple-en/blob/main/docs/huawei_artificial_intelligence_technology_and_applications.pdf}
-          {\textit{Artificial Intelligence Technology and Applications}}
-
-          % \item \textbf{SPD Ukraine\!:} Training in Machine Learning in an IT company
-          % \item \textbf{Stepik\!:} Training in Machine Learning
+          % \item \textbf{Huawei AI Certifications:} \href{https://github.com/DmytroPalahin/cv-latex-simple-en/blob/main/docs/huawei_artificial_intelligence_and_applications.pdf}{\textit{Artificial Intelligence and Applications}} \hspace{4pt}$\bullet$\hspace{4pt} \href{https://github.com/DmytroPalahin/cv-latex-simple-en/blob/main/docs/huawei_artificial_intelligence_technology_and_applications.pdf}{\textit{Artificial Intelligence Technology and Applications}}
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -505,32 +649,32 @@
 %----------------------------------------------------------------------------------------
 \vspace{-3pt}
 \pdfbookmark[1]{Participations}{participations}
-\cvsection{\awardIcon[black]\hspace{4pt}AWARDS \& PARTICIPATIONS}
+\cvsection{\awardIcon[black]\hspace{4pt}PRIX \& PARTICIPATIONS}
 
 \vspace{-6pt}
 \begin{itemize}[leftmargin=0.35cm, label=\textbullet, itemsep=0.15em]
-    \item \textbf{\href{https://www.fondationbesse.com/}{Georges Besse Foundation Laureate}}
-    \item \textbf{Eco\hspace{3pt}--\hspace{3pt}Techno Ukraine ISEF} --- 1\textsuperscript{st} place in Computer Science \& \textbf{Collective Intelligence Internet Service} --- 1\textsuperscript{st} place in Ukraine
+    \item \textbf{\href{https://www.fondationbesse.com/}{Lauréat de la Fondation Georges Besse}}
+    \item \textbf{Eco\hspace{3pt}--\hspace{3pt}Techno Ukraine ISEF} --- 1\textsuperscript{ère} place en Informatique \& \textbf{Service Internet Intelligence Collective} --- 1\textsuperscript{ère} place en Ukraine
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
 % LANGUAGES & INTERESTS
 %----------------------------------------------------------------------------------------
 \vspace{-5pt}
-\pdfbookmark[1]{Languages and interests}{languages_interests}
-\cvsection{\speechBubbleIcon[black]\hspace{4pt}LANGUAGES \& INTERESTS}
+\pdfbookmark[1]{Langues et centres d'intérêt}{languages_interests}
+\cvsection{\speechBubbleIcon[black]\hspace{4pt}LANGUES \& CENTRES D'INTÉRÊT}
 
 \vspace{-3pt}
-\cvtextnotab{\textbf{English\!:} Fluent \hspace{12pt} \textbf{French\!:} Fluent \hspace{12pt} \textbf{Ukrainian\!:} Native \hspace{20pt} \textbf{Russian\!:} Bilingual}
+\cvtextnotab{\textbf{Français\!:} Courant \hspace{12pt} \textbf{Anglais\!:} Courant \hspace{12pt} \textbf{Ukrainien\!:} Natif \hspace{20pt} \textbf{Russe\!:} Bilingue}
 
 \vspace{-8pt}
 \cvtextnotab{
-    \tradingIcon[black]\hspace{2pt}Investing \hspace{12pt}
+    \tradingIcon[black]\hspace{2pt}Marchés financiers / Trading \hspace{12pt}
     % \cryptoIcon[black]\hspace{2pt}Crypto \hspace{12pt}
-    \chessIcon[black]\hspace{2pt}Chess \hspace{12pt}
-    \skiIcon[black]\hspace{2pt}Skiing \hspace{12pt}
+    \chessIcon[black]\hspace{2pt}Échecs \hspace{12pt}
+    \skiIcon[black]\hspace{2pt}Ski \hspace{12pt}
     \tennisIcon[black]\hspace{2pt}Tennis \hspace{12pt}
-    \swimmingIcon[black]\hspace{2pt}Swimming \hspace{12pt}
+    \swimmingIcon[black]\hspace{2pt}Natation \hspace{12pt}
     % \mountainsIcon[black]\hspace{2pt}Hiking
     \flagIcon[black]\hspace{2pt}Karting | Formula 1
 }
@@ -538,7 +682,7 @@
 \end{document}
 
 /*
-latexmk -pdf cv-dmytro-palahin-en-d.tex
-latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-en-d.tex
-pdftoppm -png -r 600 cv-dmytro-palahin-en-d.pdf ./img/cv-dmytro-palahin-en-d
+latexmk -pdf cv-dmytro-palahin-fr-q.tex
+latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-fr-q.tex
+pdftoppm -png -r 600 cv-dmytro-palahin-fr-q.pdf ./img/cv-dmytro-palahin-fr-q
 */
