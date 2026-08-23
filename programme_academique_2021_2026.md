@@ -195,6 +195,7 @@
 - Calcul scientifique (Monte-Carlo)
 - Erreurs numériques
 - Précision et stabilité numérique
+- Matlab
 
 ## 1.10 Optimisation
 
@@ -228,6 +229,8 @@
 - Programmation orientée objet en Java
 - Programmation fonctionnelle
 - Programmation logique
+- SWI-Prolog
+- Matlab
 - Théorie des langages
 - Compilation
 - Logique et représentation des connaissances

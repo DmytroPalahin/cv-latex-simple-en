@@ -5,13 +5,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Built with LaTeX](https://img.shields.io/badge/Built%20with-LaTeX-008080?logo=latex&logoColor=white)](https://www.latex-project.org/)
-[![Status](https://img.shields.io/badge/status-active-brightgreen)]()
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
 ---
 
 ## 🖼️ Preview
 
-![CV Preview](img/cv-dmytro-palahin-en.png)
+![CV Preview](img/cv-dmytro-palahin-en-q.png)
+
+![CV Preview](img/cv-dmytro-palahin-en-d.png)
 
 ---
 
@@ -20,7 +22,9 @@
 Make sure you have a LaTeX distribution installed (e.g. [TeX Live](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/)) with `fontawesome5`, `paracol`, and `latexmk`.
 
 ```sh
-latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-en.tex
+latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-en-q.tex
+
+latexmk -pdf -auxdir=/tmp/latex-build -outdir=. cv-dmytro-palahin-en-d.tex
 ```
 
 ## 🤝 Contributing

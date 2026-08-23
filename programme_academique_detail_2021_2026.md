@@ -371,6 +371,7 @@
 - Erreurs numériques
 - Approximation
 - Précision numérique
+- Matlab
 
 ## 1.10 Optimisation
 
@@ -1049,9 +1050,11 @@
 - Python
 - Julia
 - SQL
+- Matlab
 - JavaScript
 - TypeScript
 - Bash
+- SWI-Prolog
 
 ## Systèmes
 
