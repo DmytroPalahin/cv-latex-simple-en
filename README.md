@@ -11,9 +11,9 @@
 
 ## 🖼️ Preview
 
-![CV Preview](img/cv-dmytro-palahin-en-q.png)
+![CV Preview](resources/img/cv-dmytro-palahin-en-q.png)
 
-![CV Preview](img/cv-dmytro-palahin-en-d.png)
+![CV Preview](resources/img/cv-dmytro-palahin-en-d.png)
 
 ---
 
