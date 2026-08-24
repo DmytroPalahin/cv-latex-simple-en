@@ -6,7 +6,7 @@ conf/**/local/**
 data/**
 logs/**
 creds/**
-# except thiers subfolders
+# except subfolders
 !data/**/
 !logs/**/
 !creds/**/
@@ -14,7 +14,7 @@ creds/**
 # keep git
 !.gitkeep
 # github
-.github/
+# .github/
 
 # IDE settings
 .idea/

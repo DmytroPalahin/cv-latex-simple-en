@@ -1,0 +1,107 @@
+name: Build & Release CV
+
+on:
+  push:
+    branches: [main]
+    tags:     ['v*.*.*']
+  pull_request:
+    branches: [main]
+
+# Cancel previous run on the same branch if a new push arrives
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # JOB 1 — Compile all CV variants in parallel via matrix
+  # ─────────────────────────────────────────────────────────────────────────────
+  build:
+    name: "Build ${{ matrix.label }}"
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false        # one failure does NOT cancel the others
+      matrix:
+        include:
+          - file:  cv-dmytro-palahin-en-d
+            path:  src/en
+            label: "🇬🇧 EN · Data Engineer"
+          - file:  cv-dmytro-palahin-en-q
+            path:  src/en
+            label: "🇬🇧 EN · Quant"
+          - file:  cv-dmytro-palahin-en-tr
+            path:  src/en
+            label: "🇬🇧 EN · Trading"
+          - file:  cv-dmytro-palahin-fr-d
+            path:  src/fr
+            label: "🇫🇷 FR · Data Engineer"
+          - file:  cv-dmytro-palahin-fr-q
+            path:  src/fr
+            label: "🇫🇷 FR · Quant"
+          - file:  cv-dmytro-palahin-fr-simple
+            path:  src/fr
+            label: "🇫🇷 FR · Simple"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX → PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ matrix.path }}/${{ matrix.file }}.tex
+          latexmk_shell_escape: true
+          extra_system_packages: "font-liberation"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.file }}
+          path: ${{ matrix.path }}/${{ matrix.file }}.pdf
+          retention-days: 30
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # JOB 2 — Create GitHub Release (only on git tag push: v*.*.*)
+  # ─────────────────────────────────────────────────────────────────────────────
+  release:
+    name: "🚀 Release ${{ github.ref_name }}"
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    permissions:
+      contents: write       # required to create a GitHub Release
+
+    steps:
+      - name: Download all compiled PDFs
+        uses: actions/download-artifact@v4
+        with:
+          path: pdfs/
+          merge-multiple: true
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "CV ${{ github.ref_name }}"
+          body: |
+            ## 📄 Dmytro Palahin — CV `${{ github.ref_name }}`
+
+            Compiled automatically from commit [`${{ github.sha }}`](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
+
+            ---
+
+            ### 📥 Downloads
+
+            | File | Language | Target role |
+            |------|----------|-------------|
+            | `cv-dmytro-palahin-en-d.pdf` | 🇬🇧 English | Data Engineer / MLOps |
+            | `cv-dmytro-palahin-en-q.pdf` | 🇬🇧 English | Quantitative Researcher |
+            | `cv-dmytro-palahin-en-tr.pdf` | 🇬🇧 English | Trading |
+            | `cv-dmytro-palahin-fr-d.pdf` | 🇫🇷 French  | Data Engineer / MLOps |
+            | `cv-dmytro-palahin-fr-q.pdf` | 🇫🇷 French  | Quantitative Researcher |
+            | `cv-dmytro-palahin-fr-simple.pdf` | 🇫🇷 French | Simple |
+          files: pdfs/*.pdf
+          draft: false
+          prerelease: false
