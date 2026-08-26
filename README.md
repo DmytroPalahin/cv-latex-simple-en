@@ -96,7 +96,7 @@ git push origin v1.3.0
 | --------- | ---------- | ------- |
 | `en-d` | 🇬🇧 English | Data Engineer / MLOps |
 | `en-q` | 🇬🇧 English | Quantitative Researcher |
-| `en-tr` | 🇬🇧 English | Trading |
+<!-- | `en-tr` | 🇬🇧 English | Trading | -->
 | `fr-d` | 🇫🇷 French | Data Engineer / MLOps |
 | `fr-q` | 🇫🇷 French | Quantitative Researcher |
 | `fr-simple` | 🇫🇷 French | Simple |

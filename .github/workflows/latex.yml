@@ -39,6 +39,9 @@ jobs:
           - file:  cv-dmytro-palahin-fr-q
             path:  src/fr
             label: "🇫🇷 FR · Quant"
+          - file:  cv-dmytro-palahin-fr-tr
+            path:  src/en
+            label: "🇫🇷 FR · Trading"
           - file:  cv-dmytro-palahin-fr-simple
             path:  src/fr
             label: "🇫🇷 FR · Simple"
@@ -98,7 +101,7 @@ jobs:
             |------|----------|-------------|
             | `cv-dmytro-palahin-en-d.pdf` | 🇬🇧 English | Data Engineer / MLOps |
             | `cv-dmytro-palahin-en-q.pdf` | 🇬🇧 English | Quantitative Researcher |
-            | `cv-dmytro-palahin-en-tr.pdf` | 🇬🇧 English | Trading |
+            # | `cv-dmytro-palahin-en-tr.pdf` | 🇬🇧 English | Trading |
             | `cv-dmytro-palahin-fr-d.pdf` | 🇫🇷 French  | Data Engineer / MLOps |
             | `cv-dmytro-palahin-fr-q.pdf` | 🇫🇷 French  | Quantitative Researcher |
             | `cv-dmytro-palahin-fr-simple.pdf` | 🇫🇷 French | Simple |
