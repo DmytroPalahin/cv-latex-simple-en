@@ -40,7 +40,7 @@ jobs:
             path:  src/fr
             label: "🇫🇷 FR · Quant"
           - file:  cv-dmytro-palahin-fr-tr
-            path:  src/en
+            path:  src/fr
             label: "🇫🇷 FR · Trading"
           - file:  cv-dmytro-palahin-fr-simple
             path:  src/fr
