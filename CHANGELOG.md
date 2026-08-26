@@ -5,11 +5,9 @@ Format: `[vMAJOR.MINOR.PATCH] - YYYY-MM-DD`
 
 ---
 
-## [Unreleased]
+## [v1.3.2] - 2024-10-26
 
-### Added
-
-- SAS-to-Python migration system bullet (GitHub Copilot, prompt engineering, Polars, DuckDB)
+- added `-tr` versions
 
 ---
 
